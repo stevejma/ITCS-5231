@@ -305,6 +305,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\LoadSceneOnClick.cs" />
     <Compile Include="Assets\Scripts\QuitOnClick.cs" />
+    <Compile Include="Assets\Scripts\SelectOnInput.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Animations\Test.txt" />
