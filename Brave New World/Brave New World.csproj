@@ -310,6 +310,7 @@
   <ItemGroup>
     <None Include="Assets\Animations\Test.txt" />
     <None Include="Assets\Audio\Test.txt" />
+    <None Include="Assets\GUI Assets\Font\OFL.txt" />
     <None Include="Assets\Models\Test.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
