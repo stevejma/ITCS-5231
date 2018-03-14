@@ -1,11 +1,11 @@
-﻿<Properties StartupConfiguration="{DD6BAF43-67B3-E5A6-CFBF-E97BE77E2E3D}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/SelectOnInput.cs">
+﻿<Properties StartupConfiguration="{DD6BAF43-67B3-E5A6-CFBF-E97BE77E2E3D}|" StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\CamSwitch.cs">
     <Files>
-      <File FileName="Assets/Scripts/SelectOnInput.cs" Line="22" Column="35" />
+      <File FileName="Assets\CamSwitch.cs" Line="12" Column="34" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.Brave_220New_220World PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
