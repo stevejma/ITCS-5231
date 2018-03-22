@@ -1,7 +1,8 @@
 ﻿<Properties StartupConfiguration="{DD6BAF43-67B3-E5A6-CFBF-E97BE77E2E3D}|" StartupItem="Assembly-CSharp.csproj">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\CamSwitch.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\SelectOnInput.cs">
     <Files>
-      <File FileName="Assets\CamSwitch.cs" Line="12" Column="34" />
+      <File FileName="Assets\Scripts\CharacterScript.cs" Line="60" Column="1" />
+      <File FileName="Assets\Scripts\SelectOnInput.cs" Line="4" Column="31" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.Brave_220New_220World PreferredExecutionTarget="Unity.Editor" />
