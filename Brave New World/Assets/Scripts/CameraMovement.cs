@@ -23,6 +23,7 @@ public class CameraMovement : MonoBehaviour {
     public Camera Camera_02;
     public Camera Camera_03;
     public Camera Camera_04;
+    public Camera Camera_05;
 
 
     void Start() {
@@ -38,6 +39,7 @@ public class CameraMovement : MonoBehaviour {
             Camera_02.enabled = false;
             Camera_03.enabled = false;
             Camera_04.enabled = false;
+            Camera_05.enabled = false;
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha2)) {
@@ -45,6 +47,7 @@ public class CameraMovement : MonoBehaviour {
             Camera_02.enabled = true;
             Camera_03.enabled = false;
             Camera_04.enabled = false;
+            Camera_05.enabled = false;
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha3)) {
@@ -52,6 +55,7 @@ public class CameraMovement : MonoBehaviour {
             Camera_02.enabled = false;
             Camera_03.enabled = true;
             Camera_04.enabled = false;
+            Camera_05.enabled = false;
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha4)) {
@@ -59,8 +63,16 @@ public class CameraMovement : MonoBehaviour {
             Camera_02.enabled = false;
             Camera_03.enabled = false;
             Camera_04.enabled = true;
+            Camera_05.enabled = false;
         }
 
+        if (Input.GetKeyDown(KeyCode.Alpha5)) {
+            Camera_01.enabled = false;
+            Camera_02.enabled = false;
+            Camera_03.enabled = false;
+            Camera_04.enabled = false;
+            Camera_05.enabled = true;
+        }
 
         rotationX += Input.GetAxis("Mouse X") * sensX * Time.deltaTime;
         rotationY += Input.GetAxis("Mouse Y") * sensY * Time.deltaTime;
@@ -88,5 +100,10 @@ public class CameraMovement : MonoBehaviour {
         fov4 -= Input.GetAxis("Mouse ScrollWheel") * sensitivity;
         fov4 = Mathf.Clamp(fov, minFov, maxFov);
         Camera_04.fieldOfView = fov4;
+
+        float fov5 = Camera_04.fieldOfView;
+        fov5 -= Input.GetAxis("Mouse ScrollWheel") * sensitivity;
+        fov5 = Mathf.Clamp(fov, minFov, maxFov);
+        Camera_05.fieldOfView = fov5;
     }
 }
