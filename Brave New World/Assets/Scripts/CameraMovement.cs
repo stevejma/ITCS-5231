@@ -27,6 +27,7 @@ public class CameraMovement : MonoBehaviour {
 
 
     void Start() {
+        Cursor.visible = false;
         Camera_01.enabled = true;
         Camera_02.enabled = false;
         Camera_03.enabled = false;
