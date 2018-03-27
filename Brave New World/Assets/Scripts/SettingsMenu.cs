@@ -8,12 +8,14 @@ public class SettingsMenu : MonoBehaviour {
 
     public AudioMixer audioMixer;
     public Dropdown resolutionDropdown;
+    public Dropdown qualityDropdown;
 
     Resolution[] resolutions;
 
     void Start(){
         resolutions = Screen.resolutions;
         resolutionDropdown.ClearOptions();
+        qualityDropdown.value = 2;
 
         List<string> options = new List<string>();
 
