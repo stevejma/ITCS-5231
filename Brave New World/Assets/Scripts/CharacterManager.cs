@@ -35,7 +35,7 @@ public class CharacterManager : MonoBehaviour {
 			anim.SetTrigger ("isWalking");
 			SetDestination (endPoint);
 		}
-		Debug.Log ("DisttoDest: " + distToDestination + ", ROS: " + radiusOfSatisfaction);
+
 		if (distToDestination < radiusOfSatisfaction) {
 			anim.SetTrigger ("idle");
 			Destroy (GameObject.FindWithTag("Player"));

@@ -1,10 +1,10 @@
 ﻿<Properties StartupConfiguration="{DD6BAF43-67B3-E5A6-CFBF-E97BE77E2E3D}|" StartupItem="Assembly-CSharp.csproj">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\CharacterManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\SettingsMenu.cs">
     <Files>
       <File FileName="Assets\Scripts\PauseMenu.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\SettingsMenu.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\CameraMovement.cs" Line="80" Column="46" />
-      <File FileName="Assets\Scripts\CharacterManager.cs" Line="10" Column="50" />
+      <File FileName="Assets\Scripts\SettingsMenu.cs" Line="44" Column="35" />
+      <File FileName="Assets\Scripts\CameraMovement.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\CharacterManager.cs" Line="38" Column="3" />
       <File FileName="Assets\Scripts\QuitOnClick.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\LoadSceneOnClick.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\SelectOnInput.cs" Line="1" Column="1" />

@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿	using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
@@ -41,6 +41,7 @@ public class SettingsMenu : MonoBehaviour {
 
     public void SetVolume(float volume){
         audioMixer.SetFloat("Volume", volume);
+		Debug.Log ("volume: " + volume);
     }
 
     public void SetQuality(int qualityIndex){
