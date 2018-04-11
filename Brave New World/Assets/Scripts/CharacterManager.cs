@@ -14,9 +14,6 @@ public class CharacterManager : MonoBehaviour {
 	private static float turnSpeed = 10f;
     private static float moveSpeed = .75f;
 
-	//private Vector3 endPoint;
-	//private Vector3 destination;
-
 	// Use this for initialization
 	void Start () {
         pathGO = GameObject.Find("Path");
@@ -40,10 +37,10 @@ public class CharacterManager : MonoBehaviour {
                 ReachedGoal();
             }
         }
-		movement ();
+		Movement ();
 	}
 
-	void movement() {
+	void Movement() {
 
 		float distToDestination = Vector3.Distance (transform.position, targetPathNode.position);
         Vector3 dir = targetPathNode.position - this.transform.localPosition;   //Vector facing the direction towards the pathNode
