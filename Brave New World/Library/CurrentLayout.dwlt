@@ -34,7 +34,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 950, y: 521}
+  m_MinSize: {x: 950, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -67,8 +67,12 @@ MonoBehaviour:
 =======
     width: 1920
     height: 997
+<<<<<<< HEAD
   m_MinSize: {x: 950, y: 521}
 >>>>>>> parent of e76db857... Complete Game world
+=======
+  m_MinSize: {x: 950, y: 542}
+>>>>>>> parent of 8ffdd6be... 4/8/18
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &3
 MonoBehaviour:
@@ -159,9 +163,10 @@ MonoBehaviour:
 =======
     width: 1920
     height: 947
-  m_MinSize: {x: 711, y: 471}
-  m_MaxSize: {x: 18006, y: 14021}
+  m_MinSize: {x: 713, y: 492}
+  m_MaxSize: {x: 18008, y: 14042}
   vertical: 0
+<<<<<<< HEAD
   controlID: 11
 >>>>>>> parent of e76db857... Complete Game world
 =======
@@ -172,6 +177,9 @@ MonoBehaviour:
   vertical: 0
   controlID: 19898
 >>>>>>> parent of f3c87deb... Complete Game World
+=======
+  controlID: 380
+>>>>>>> parent of 8ffdd6be... 4/8/18
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -204,6 +212,7 @@ MonoBehaviour:
   m_MinSize: {x: 202, y: 421}
   m_MaxSize: {x: 4002, y: 8021}
   vertical: 1
+<<<<<<< HEAD
   controlID: 12
 >>>>>>> parent of e76db857... Complete Game world
 =======
@@ -214,6 +223,9 @@ MonoBehaviour:
   vertical: 1
   controlID: 19899
 >>>>>>> parent of f3c87deb... Complete Game World
+=======
+  controlID: 381
+>>>>>>> parent of 8ffdd6be... 4/8/18
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -243,9 +255,14 @@ MonoBehaviour:
 =======
     width: 1037
     height: 476
+<<<<<<< HEAD
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
 >>>>>>> parent of e76db857... Complete Game world
+=======
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
+>>>>>>> parent of 8ffdd6be... 4/8/18
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -283,9 +300,14 @@ MonoBehaviour:
     y: 476
     width: 1037
     height: 471
+<<<<<<< HEAD
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
 >>>>>>> parent of e76db857... Complete Game world
+=======
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
+>>>>>>> parent of 8ffdd6be... 4/8/18
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -327,14 +349,18 @@ MonoBehaviour:
     y: 0
     width: 485
     height: 947
-  m_MinSize: {x: 234, y: 471}
-  m_MaxSize: {x: 10004, y: 14021}
+  m_MinSize: {x: 234, y: 492}
+  m_MaxSize: {x: 10004, y: 14042}
   vertical: 1
+<<<<<<< HEAD
   controlID: 75
 >>>>>>> parent of e76db857... Complete Game world
 =======
   controlID: 19930
 >>>>>>> parent of f3c87deb... Complete Game World
+=======
+  controlID: 353
+>>>>>>> parent of 8ffdd6be... 4/8/18
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -364,9 +390,14 @@ MonoBehaviour:
 =======
     width: 485
     height: 453
+<<<<<<< HEAD
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
 >>>>>>> parent of e76db857... Complete Game world
+=======
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
+>>>>>>> parent of 8ffdd6be... 4/8/18
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -440,9 +471,14 @@ MonoBehaviour:
     y: 0
     width: 398
     height: 947
+<<<<<<< HEAD
   m_MinSize: {x: 275, y: 50}
   m_MaxSize: {x: 4000, y: 4000}
 >>>>>>> parent of e76db857... Complete Game world
+=======
+  m_MinSize: {x: 277, y: 71}
+  m_MaxSize: {x: 4002, y: 4021}
+>>>>>>> parent of 8ffdd6be... 4/8/18
   m_ActualView: {fileID: 20}
   m_Panes:
   - {fileID: 20}
@@ -835,8 +871,9 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 902f0000
+    m_SelectedIDs: 24070000
     m_LastClickedID: 0
+<<<<<<< HEAD
     m_ExpandedIDs: daeaffff00000000
 >>>>>>> parent of e76db857... Complete Game world
 =======
@@ -845,6 +882,9 @@ MonoBehaviour:
     m_LastClickedID: 0
     m_ExpandedIDs: 3811f9ffe61cf9ff265df9ff0093fcff9efbffff00000000983400004a35000062350000c43500000236000052370000dc380000e238000038390000
 >>>>>>> parent of f3c87deb... Complete Game World
+=======
+    m_ExpandedIDs: 9efbffff00000000
+>>>>>>> parent of 8ffdd6be... 4/8/18
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1039,17 +1079,18 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Models/WhiteCity/Models/Buildings/Materials
+    - Assets/Scripts
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Models/WhiteCity/Models/Buildings/Materials
+  - Assets/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\justi\Desktop\Justin's\Work\Spring 2018\ITCS 4231 -
     Advanced Game Design\Game Design Files\ITCS-5231\Brave New World
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     m_SelectedIDs: 562b0000
@@ -1065,6 +1106,11 @@ MonoBehaviour:
     m_LastClickedID: 11088
     m_ExpandedIDs: 00000000fe2700003228000032290000082b0000ca2b00001c2c0000a82e0000ec2e0000f42e0000402f0000842f0000b82f0000be2f0000243200008632000028330000ea3c0000ec3c0000ee3c0000f03c0000f23c000000ca9a3bffffff7f
 >>>>>>> parent of f3c87deb... Complete Game World
+=======
+    m_SelectedIDs: c6290000
+    m_LastClickedID: 10694
+    m_ExpandedIDs: 0000000088270000b827000076280000162a0000c62a0000022b00004e2d00008a2d0000162e0000422e0000482e0000ac30000054310000b63a0000b83a0000ba3a0000bc3a0000be3a000000ca9a3bffffff7f
+>>>>>>> parent of 8ffdd6be... 4/8/18
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1094,6 +1140,7 @@ MonoBehaviour:
     m_LastClickedID: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_ExpandedIDs: 000000000028000036280000362900000e2b0000d02b0000222c0000ae2e0000f22e0000fa2e0000462f00008a2f0000be2f0000c42f00002c3200009032000036330000523d0000543d0000563d0000583d00005a3d000000ca9a3bffffff7f
 =======
     m_ExpandedIDs: 00000000502e0000802e00003e2f0000da30000088310000c43100000434000040340000ca340000f6340000fc3400005a37000002380000384100003a4100003c4100003e41000040410000
@@ -1101,6 +1148,9 @@ MonoBehaviour:
 =======
     m_ExpandedIDs: 00000000fe2700003228000032290000082b0000ca2b00001c2c0000a82e0000ec2e0000f42e0000402f0000842f0000b82f0000be2f0000243200008632000028330000ea3c0000ec3c0000ee3c0000f03c0000f23c000000ca9a3bffffff7f
 >>>>>>> parent of f3c87deb... Complete Game World
+=======
+    m_ExpandedIDs: 0000000088270000b827000076280000162a0000c62a0000022b00004e2d00008a2d0000162e0000422e0000482e0000ac30000054310000b63a0000b83a0000ba3a0000bc3a0000be3a000000ca9a3bffffff7f
+>>>>>>> parent of 8ffdd6be... 4/8/18
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1127,7 +1177,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: 2ca6ffff702f0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1196,7 +1246,7 @@ MonoBehaviour:
     height: 1286
 >>>>>>> parent of f3c87deb... Complete Game World
   m_PersistentViewDataDictionary: {fileID: 0}
-  m_ScrollPosition: {x: 0, y: 3.9550781}
+  m_ScrollPosition: {x: 0, y: 0}
   m_InspectorMode: 0
   m_PreviewResizer:
     m_CachedPref: 307
