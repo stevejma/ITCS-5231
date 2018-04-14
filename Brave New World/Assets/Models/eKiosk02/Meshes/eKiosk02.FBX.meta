@@ -4,9 +4,24 @@ timeCreated: 18446744011573954816
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
+    100000: //RootNode
+    400000: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
     4300000: eKiosk02
     4300002: eKiosk01
-  externalObjects: {}
+    11100000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: eKiosk02
+    second: {fileID: 2100000, guid: 66e643cd16d4a80419635f8e5d563bfe, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: eKiosk02Glass
+    second: {fileID: 2100000, guid: 38718abf7033c4346a85615df35fa54a, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

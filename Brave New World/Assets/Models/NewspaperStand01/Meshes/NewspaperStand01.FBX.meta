@@ -4,10 +4,35 @@ timeCreated: 18446744011573954816
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
+    100000: //RootNode
+    100002: NewspaperStand01a
+    100004: NewspaperStand01b
+    100006: NewspaperStand01c
+    400000: //RootNode
+    400002: NewspaperStand01a
+    400004: NewspaperStand01b
+    400006: NewspaperStand01c
+    2300000: NewspaperStand01a
+    2300002: NewspaperStand01b
+    2300004: NewspaperStand01c
+    3300000: NewspaperStand01a
+    3300002: NewspaperStand01b
+    3300004: NewspaperStand01c
     4300000: NewspaperStand01a
     4300002: NewspaperStand01b
     4300004: NewspaperStand01c
-  externalObjects: {}
+    11100000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: NewspaperStand01
+    second: {fileID: 2100000, guid: 10e8e62b0a025094a84d7c9e519c104e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: NewspaperStand01Glass
+    second: {fileID: 2100000, guid: 0bb32f7e16381cf4b830ea3bdcd4dd3d, type: 2}
   materials:
     importMaterials: 1
     materialName: 1
