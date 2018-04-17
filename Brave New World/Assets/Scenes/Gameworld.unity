@@ -6413,8 +6413,8 @@ MonoBehaviour:
   - {fileID: 1385397712336810, guid: 7463ce5728561474bbda74e5cd93c1d9, type: 2}
   spawnValues: {x: 4, y: 0, z: 2}
   spawnWait: 0
-  spawnMostWait: 2
-  spawnLeastWait: 0.5
+  spawnMostWait: 3
+  spawnLeastWait: 1
   startWait: 1
 --- !u!4 &942015861
 Transform:
@@ -14288,7 +14288,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: ba8737f783a80324a816d7ca41907a4f, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 09dd717db13361749b94d90452dda72b, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
