@@ -6409,8 +6409,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   npc:
-  - {fileID: 1642982467535508, guid: f0e258d8f4b1b27469a0cbaf85c4efe3, type: 2}
-  - {fileID: 1385397712336810, guid: 7463ce5728561474bbda74e5cd93c1d9, type: 2}
+  - {fileID: 339037988}
+  - {fileID: 1868789497}
   spawnValues: {x: 4, y: 0, z: 2}
   spawnWait: 0
   spawnMostWait: 3
