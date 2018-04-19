@@ -7,15 +7,15 @@ using UnityEngine;
  */
 
 public class YValue : MonoBehaviour {
-    int age;
-    int loyalty;
+    public int age;
+    public int loyalty;
 
-    string gender = "Male";
-    string ethnicity;
-    string sexID;
-    string occupation;
-    string religion;
-    string maritalStatus;
+    public string gender = "Male";
+    public string ethnicity;
+    public string sexID;
+    public string occupation;
+    public string religion;
+    public string maritalStatus;
 
     string[] jobList = new string[] {"Student",
                                      "Refuse worker",
@@ -90,7 +90,7 @@ public class YValue : MonoBehaviour {
         } else if (Random.value <= 0.94) {
             loyalty = Random.Range(7, 9);
         } else {
-            Random.Range(9, 11);
+            loyalty = Random.Range(9, 11);
         }
 
         /*
@@ -117,21 +117,16 @@ public class YValue : MonoBehaviour {
         }
 
         /*
-         * Percentage of marital status:
-         *      Single - 48%
-         *      Married - 52%
-         */
-        loyalty = Random.Range(1, 11);
-
-        /*
          * Percentage of sexual identity:
          *      Heterosexual - 95%
          *      Non-heterosexual - 5%
          */
         if (Random.value <= 0.95) {
             sexID = "Straight";
-        } else {
+        } else if (Random.value <= 0.975) {
             sexID = "Homosexual";
+        } else {
+            sexID = "Homosexual Tendencies";
         }
 
         /*

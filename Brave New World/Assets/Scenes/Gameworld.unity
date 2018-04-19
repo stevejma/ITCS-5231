@@ -2381,6 +2381,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68e2fd44f497aa84dba6c112138961bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  age: 0
+  loyalty: 0
+  gender: Female
+  ethnicity: 
+  sexID: 
+  occupation: 
+  religion: 
+  maritalStatus: 
 --- !u!1 &345256241
 GameObject:
   m_ObjectHideFlags: 0
@@ -7086,6 +7094,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1642982467535508, guid: f0e258d8f4b1b27469a0cbaf85c4efe3, type: 2}
+      propertyPath: m_TagString
+      value: NPC
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f0e258d8f4b1b27469a0cbaf85c4efe3, type: 2}
   m_IsPrefabParent: 0
@@ -9900,6 +9912,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1385397712336810, guid: 7463ce5728561474bbda74e5cd93c1d9, type: 2}
+      propertyPath: m_TagString
+      value: NPC
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7463ce5728561474bbda74e5cd93c1d9, type: 2}
   m_IsPrefabParent: 0
@@ -12439,6 +12455,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7624c95e9fc00704ea2ea14ffe69c748, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  age: 0
+  loyalty: 0
+  gender: Male
+  ethnicity: 
+  sexID: 
+  occupation: 
+  religion: 
+  maritalStatus: 
 --- !u!1 &1876789592
 GameObject:
   m_ObjectHideFlags: 0

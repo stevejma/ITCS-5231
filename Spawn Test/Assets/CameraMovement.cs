@@ -27,10 +27,22 @@ public class CameraMovement : MonoBehaviour {
     }
 
     void Update() {
+        if (Input.GetMouseButtonDown(0)) {
+            int layerMask = 1 << 8;
+            layerMask = ~layerMask;
+
+            RaycastHit hit;
+            if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, Mathf.Infinity, layerMask)) {
+                Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
+                Debug.Log("Did Hit");
+            } else {
+                Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 1000, Color.white);
+                Debug.Log("Did not Hit");
+            }
+        }
+
         if (Input.GetKeyDown(KeyCode.Alpha1)) {
             Camera_01.enabled = true;
-
-        
         }
 
         rotationX += Input.GetAxis("Mouse X") * sensX * Time.deltaTime;

@@ -32,10 +32,17 @@ public class CameraMovement : MonoBehaviour {
         Camera_02.enabled = false;
         Camera_03.enabled = false;
         Camera_04.enabled = false;
+        Camera_05.enabled = false;
     }
 
     void Update() {
+        bool npcHit = false;
+
+        RaycastHit raycastHit = new RaycastHit(); // create new raycast hit info object
+
         if (Input.GetKeyDown(KeyCode.Alpha1)) {
+            mainCam = Camera_01;
+
             Camera_01.enabled = true;
             Camera_02.enabled = false;
             Camera_03.enabled = false;
@@ -44,6 +51,8 @@ public class CameraMovement : MonoBehaviour {
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha2)) {
+            mainCam = Camera_02;
+
             Camera_01.enabled = false;
             Camera_02.enabled = true;
             Camera_03.enabled = false;
@@ -52,6 +61,8 @@ public class CameraMovement : MonoBehaviour {
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha3)) {
+            mainCam = Camera_03;
+
             Camera_01.enabled = false;
             Camera_02.enabled = false;
             Camera_03.enabled = true;
@@ -60,6 +71,8 @@ public class CameraMovement : MonoBehaviour {
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha4)) {
+            mainCam = Camera_04;
+
             Camera_01.enabled = false;
             Camera_02.enabled = false;
             Camera_03.enabled = false;
@@ -68,11 +81,30 @@ public class CameraMovement : MonoBehaviour {
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha5)) {
+            mainCam = Camera_05;
+
             Camera_01.enabled = false;
             Camera_02.enabled = false;
             Camera_03.enabled = false;
             Camera_04.enabled = false;
             Camera_05.enabled = true;
+        }
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            
+            if (Physics.Raycast(mainCam.ScreenPointToRay(Input.mousePosition), out raycastHit))
+            { // create ray from screen's mouse position to world and store info in raycastHit object
+                if (raycastHit.collider.tag == "NPC")
+                { // we just want to hit objects tagged with "NPC"
+                    npcHit = true; // yup, we hit it!
+                    Debug.Log("Hit");
+
+                    XValue occupation = gameObject.GetComponent<XValue>();
+                    //YValue religion = gameObject.GetComponent<YValue>();
+                    Debug.Log("Target's Religion: " + occupation);
+                }
+            }
         }
 
         rotationX += Input.GetAxis("Mouse X") * sensX * Time.deltaTime;

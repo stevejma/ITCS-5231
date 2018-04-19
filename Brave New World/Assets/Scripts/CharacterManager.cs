@@ -74,7 +74,7 @@ public class CharacterManager : MonoBehaviour
 
             // Move towards destination
             transform.Translate(dir.normalized * distThisFrame, Space.World);
-            Debug.Log("TargetPathNodePosition: " + targetPathNode.position + ", Destination: " + dir);  //compares the node destination to the calculated destination
+            //Debug.Log("TargetPathNodePosition: " + targetPathNode.position + ", Destination: " + dir);  //compares the node destination to the calculated destination
 
             //Rotate towards destination
             Quaternion targetRotation = Quaternion.LookRotation(dir.normalized);
