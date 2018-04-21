@@ -58,9 +58,8 @@ public class CharacterManager : MonoBehaviour
         }
 
         Debug.DrawLine(transform.position + Vector3.up, targetPathNode.position, Color.blue); //Blue is where the bots need to go, the node destination
-       // Debug.DrawLine(transform.position + Vector3.up, dir, Color.red);                       //Red is where they want to go, the "dir" vector
-        Debug.DrawRay(transform.position + Vector3.up, dir, Color.red);
-
+        Debug.DrawRay(transform.position + Vector3.up, dir, Color.red);                   //Red is where they want to go, the "dir" vector
+        
 
         //Script if's
         if (distToDestination < radiusOfSatisfaction)
@@ -74,7 +73,6 @@ public class CharacterManager : MonoBehaviour
 
             // Move towards destination
             transform.Translate(dir.normalized * distThisFrame, Space.World);
-            //Debug.Log("TargetPathNodePosition: " + targetPathNode.position + ", Destination: " + dir);  //compares the node destination to the calculated destination
 
             //Rotate towards destination
             Quaternion targetRotation = Quaternion.LookRotation(dir.normalized);
