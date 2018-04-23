@@ -1604,7 +1604,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1151771961}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &275235813
 MeshRenderer:
@@ -2046,7 +2046,7 @@ GameObject:
   - component: {fileID: 331085509}
   m_Layer: 0
   m_Name: Camera_05
-  m_TagString: Untagged
+  m_TagString: Cam
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2057,9 +2057,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 331085507}
-  m_LocalRotation: {x: 0.000000009300994, y: 0.7301063, z: 4.773536e-10, w: 0.6833336}
-  m_LocalPosition: {x: -13.787093, y: 0, z: 1.8586316}
-  m_LocalScale: {x: 1.0000008, y: 0.9999999, z: 1.0000008}
+  m_LocalRotation: {x: 0.000000009300995, y: 0.73010635, z: 4.7735327e-10, w: 0.68333364}
+  m_LocalPosition: {x: -13.855, y: 0.033, z: 1.842}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1963572558}
   m_RootOrder: 1
@@ -2081,12 +2081,12 @@ MonoBehaviour:
   maxY: 45
   sensX: 100
   sensY: 100
-  mainCam: {fileID: 0}
   Camera_01: {fileID: 505083111}
   Camera_02: {fileID: 353012336}
   Camera_03: {fileID: 2092487625}
   Camera_04: {fileID: 611812554}
   Camera_05: {fileID: 331085512}
+  currentCam: {fileID: 331085512}
 --- !u!81 &331085510
 AudioListener:
   m_ObjectHideFlags: 0
@@ -2165,6 +2165,20 @@ MonoBehaviour:
   occupation: 
   religion: 
   maritalStatus: 
+--- !u!64 &339037990
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 339037988}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300002, guid: 33807437c0cf87244824bb137f91f69b, type: 3}
 --- !u!1 &345256241
 GameObject:
   m_ObjectHideFlags: 0
@@ -2219,7 +2233,7 @@ GameObject:
   - component: {fileID: 353012333}
   m_Layer: 0
   m_Name: Camera_02
-  m_TagString: Untagged
+  m_TagString: Cam
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2231,8 +2245,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 353012331}
   m_LocalRotation: {x: 0.0000000055879354, y: 0.76604444, z: 0.00000000745058, w: 0.6427877}
-  m_LocalPosition: {x: 0.106, y: -0, z: -1.48}
-  m_LocalScale: {x: 1.0000008, y: 0.9999999, z: 1.0000008}
+  m_LocalPosition: {x: 0.163, y: 0.22200012, z: -1.622}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 612340095}
   m_RootOrder: 1
@@ -2254,12 +2268,12 @@ MonoBehaviour:
   maxY: 45
   sensX: 100
   sensY: 100
-  mainCam: {fileID: 0}
   Camera_01: {fileID: 505083111}
   Camera_02: {fileID: 353012336}
   Camera_03: {fileID: 2092487625}
   Camera_04: {fileID: 611812554}
   Camera_05: {fileID: 331085512}
+  currentCam: {fileID: 353012336}
 --- !u!81 &353012334
 AudioListener:
   m_ObjectHideFlags: 0
@@ -3160,7 +3174,7 @@ GameObject:
   - component: {fileID: 505083108}
   m_Layer: 0
   m_Name: Camera_01
-  m_TagString: Untagged
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3171,13 +3185,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 505083106}
-  m_LocalRotation: {x: 0.0000000055879354, y: 0.76604444, z: 0.00000000745058, w: 0.6427877}
-  m_LocalPosition: {x: 0.048, y: -0, z: -0.014}
-  m_LocalScale: {x: 1.0000008, y: 0.9999999, z: 1.0000008}
+  m_LocalRotation: {x: 0.026005864, y: 0.7663769, z: -0.021768194, w: 0.64149535}
+  m_LocalPosition: {x: 0.05408895, y: -0.1355091, z: 0.61323804}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1151771961}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 100, z: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 235, z: 0}
 --- !u!114 &505083108
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3195,12 +3209,12 @@ MonoBehaviour:
   maxY: 45
   sensX: 100
   sensY: 100
-  mainCam: {fileID: 0}
   Camera_01: {fileID: 505083111}
   Camera_02: {fileID: 353012336}
   Camera_03: {fileID: 2092487625}
   Camera_04: {fileID: 611812554}
   Camera_05: {fileID: 331085512}
+  currentCam: {fileID: 505083111}
 --- !u!81 &505083109
 AudioListener:
   m_ObjectHideFlags: 0
@@ -4137,7 +4151,7 @@ GameObject:
   - component: {fileID: 611812551}
   m_Layer: 0
   m_Name: Camera_04
-  m_TagString: Untagged
+  m_TagString: Cam
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4149,8 +4163,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 611812549}
   m_LocalRotation: {x: 0.0000000055879354, y: 0.76604444, z: 0.00000000745058, w: 0.6427877}
-  m_LocalPosition: {x: 0.048, y: -0, z: -0.014}
-  m_LocalScale: {x: 1.0000008, y: 0.9999999, z: 1.0000008}
+  m_LocalPosition: {x: 0.06367493, y: -0.08161926, z: 0.1690979}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1963839044}
   m_RootOrder: 1
@@ -4172,12 +4186,12 @@ MonoBehaviour:
   maxY: 45
   sensX: 100
   sensY: 100
-  mainCam: {fileID: 0}
   Camera_01: {fileID: 505083111}
   Camera_02: {fileID: 353012336}
   Camera_03: {fileID: 2092487625}
   Camera_04: {fileID: 611812554}
   Camera_05: {fileID: 331085512}
+  currentCam: {fileID: 611812554}
 --- !u!81 &611812552
 AudioListener:
   m_ObjectHideFlags: 0
@@ -7295,8 +7309,8 @@ Transform:
   m_LocalPosition: {x: 20.609886, y: 36.13153, z: 42.47734}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 275235812}
   - {fileID: 505083107}
+  - {fileID: 275235812}
   m_Father: {fileID: 373061452}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 134.862, z: 3.887}
@@ -11679,6 +11693,20 @@ MonoBehaviour:
   occupation: 
   religion: 
   maritalStatus: 
+--- !u!64 &1868789499
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1868789497}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: c5d5fc8936a4a7f4baf8bc153bceb4b1, type: 3}
 --- !u!1 &1876789592
 GameObject:
   m_ObjectHideFlags: 0
@@ -13245,7 +13273,7 @@ GameObject:
   - component: {fileID: 2092487622}
   m_Layer: 0
   m_Name: Camera_03
-  m_TagString: Untagged
+  m_TagString: Cam
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13256,9 +13284,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2092487620}
-  m_LocalRotation: {x: 0.0000000055879354, y: 0.76604444, z: 0.00000000745058, w: 0.6427877}
-  m_LocalPosition: {x: 0.048, y: -0, z: -0.014}
-  m_LocalScale: {x: 1.0000008, y: 0.9999999, z: 1.0000008}
+  m_LocalRotation: {x: 0.0000000055879354, y: 0.7660444, z: 0.0000000074505797, w: 0.6427877}
+  m_LocalPosition: {x: 0.494859, y: -0.39500046, z: 0.18443027}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 382000470}
   m_RootOrder: 1
@@ -13280,12 +13308,12 @@ MonoBehaviour:
   maxY: 45
   sensX: 100
   sensY: 100
-  mainCam: {fileID: 0}
   Camera_01: {fileID: 505083111}
   Camera_02: {fileID: 353012336}
   Camera_03: {fileID: 2092487625}
   Camera_04: {fileID: 611812554}
   Camera_05: {fileID: 331085512}
+  currentCam: {fileID: 2092487625}
 --- !u!81 &2092487623
 AudioListener:
   m_ObjectHideFlags: 0
