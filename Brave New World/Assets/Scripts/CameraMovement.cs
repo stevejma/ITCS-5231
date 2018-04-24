@@ -26,7 +26,7 @@ public class CameraMovement : MonoBehaviour {
     public Camera currentCam;
 
     void Start() {
-        Screen.lockCursor = true;
+        Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = true;
         Camera_01.enabled = true;
         Camera_02.enabled = false;
