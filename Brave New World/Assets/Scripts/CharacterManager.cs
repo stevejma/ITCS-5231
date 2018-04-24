@@ -12,11 +12,13 @@ public class CharacterManager : MonoBehaviour
 
     private static float radiusOfSatisfaction = 0.75f;
     private static float turnSpeed = 10f;
-    private static float moveSpeed = 3f;
+    private static float moveSpeed;
 
     // Use this for initialization
     void Start()
     {
+
+        moveSpeed = Random.Range(1, 6);
         pathGO = GameObject.Find("Path");
         anim.SetTrigger("idle");
     }

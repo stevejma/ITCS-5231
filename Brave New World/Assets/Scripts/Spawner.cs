@@ -26,7 +26,7 @@ public class Spawner : MonoBehaviour {
         yield return new WaitForSeconds(startWait);
 
         while(true) {
-            randNPC = Random.Range(0, 2);
+            randNPC = Random.Range(0, npc.Length);
 
             Vector3 spawnPosition = new Vector3(Random.Range(-spawnValues.x, spawnValues.x), 0, Random.Range(-spawnValues.z, spawnValues.z));
 
