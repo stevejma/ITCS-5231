@@ -26,14 +26,13 @@ public class CameraMovement : MonoBehaviour {
     public Camera currentCam;
 
     void Start() {
+        Screen.lockCursor = true;
         Cursor.visible = true;
         Camera_01.enabled = true;
         Camera_02.enabled = false;
         Camera_03.enabled = false;
         Camera_04.enabled = false;
         Camera_05.enabled = false;
-
-
     }
 
     void Update() {
@@ -47,7 +46,7 @@ public class CameraMovement : MonoBehaviour {
                 Camera_05.enabled = false;
 
                 currentCam = Camera_01;
-            }
+        }
         if (Input.GetKeyDown(KeyCode.Alpha2)) {
                 Camera_01.enabled = false;
                 Camera_02.enabled = true;
@@ -110,13 +109,16 @@ public class CameraMovement : MonoBehaviour {
             if (hit)
             {
                 Debug.Log("Hit " + hitInfo.transform.gameObject.name);
-                if (hitInfo.transform.gameObject.tag == "NPC")
+                if (hitInfo.transform.gameObject.tag == "xNPC")
                 {
-                    Debug.Log("It's working!");
+                    Debug.Log("Hit Female");
                 }
-                else
+                else if (hitInfo.transform.gameObject.tag == "yNPC")
                 {
-                    Debug.Log("nopz");
+                    Debug.Log("Hit Male");
+                } else
+                {
+                    Debug.Log("Nope.");
                 }
             }
 
