@@ -6732,8 +6732,8 @@ MonoBehaviour:
   - {fileID: 1336326034507128, guid: c03f6f4573c69da4d8a19e10cc442a43, type: 2}
   spawnValues: {x: 4, y: 0, z: 2}
   spawnWait: 0
-  spawnMostWait: 10
-  spawnLeastWait: 5
+  spawnMostWait: 7
+  spawnLeastWait: 3
   startWait: 1
 --- !u!4 &942015861
 Transform:
@@ -12514,8 +12514,8 @@ MonoBehaviour:
   - {fileID: 1828671953793300, guid: cf7f4b99abffb2642a9fe95cac7d43ee, type: 2}
   spawnValues: {x: 4, y: 0, z: 2}
   spawnWait: 0
-  spawnMostWait: 10
-  spawnLeastWait: 5
+  spawnMostWait: 7
+  spawnLeastWait: 3
   startWait: 1
 --- !u!4 &1845918641
 Transform:
