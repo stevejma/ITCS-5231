@@ -5,6 +5,7 @@ using UnityEngine;
 public class CharacterManager : MonoBehaviour
 {
     [SerializeField] private Animator anim;
+    [SerializeField] private int pathIndex;
 
     GameObject pathGO;
     Transform targetPathNode;
@@ -12,21 +13,40 @@ public class CharacterManager : MonoBehaviour
 
     private static float radiusOfSatisfaction = 0.75f;
     private static float turnSpeed = 10f;
-    private static float moveSpeed;
+    private float moveSpeed;
+    private static string path;
 
     // Use this for initialization
     void Start()
     {
+        if (pathIndex == 0)
+        {
+            path = "Path1";
+        }
+        if (pathIndex == 1) {
+            path = "Path2";
+        }
+        if (pathIndex == 2)
+        {
+            path = "Path3";
+        }
 
-        moveSpeed = Random.Range(1, 6);
-        pathGO = GameObject.Find("Path");
+        moveSpeed = Random.Range(1, 5);
+        pathGO = GameObject.Find(path);
         anim.SetTrigger("idle");
     }
 
     void GetNextPathNode()
     {
-        targetPathNode = pathGO.transform.GetChild(pathNodeIndex);
-        pathNodeIndex++;
+        if (pathNodeIndex < pathGO.transform.childCount) {
+            targetPathNode = pathGO.transform.GetChild(pathNodeIndex);
+            pathNodeIndex++;
+        }
+        else
+        {
+            targetPathNode = null;
+        }
+        
     }
 
     // Update is called once per frame
@@ -40,6 +60,7 @@ public class CharacterManager : MonoBehaviour
             {
                 //Ran out of path to follow
                 ReachedGoal();
+                return;
             }
         }
         Movement();
@@ -49,13 +70,13 @@ public class CharacterManager : MonoBehaviour
     {
 
         float distToDestination = Vector3.Distance(transform.position, targetPathNode.position);
-        Vector3 dir = targetPathNode.position - this.transform.position;   //Vector facing the direction towards the pathNode
+        Vector3 dir = targetPathNode.position - this.transform.position;        //Vector facing the direction towards the pathNode
         float distThisFrame = moveSpeed * Time.deltaTime;                       //distance that will be covered this frame
         dir.y = 0;
 
         //Animation if's
-        if (distToDestination > radiusOfSatisfaction)
-        {   //Far away enough to keep walking
+        if (distToDestination > radiusOfSatisfaction)   //Far away enough to keep walking
+        {   
             anim.SetTrigger("isWalking");
         }
 
@@ -64,14 +85,13 @@ public class CharacterManager : MonoBehaviour
         
 
         //Script if's
-        if (distToDestination < radiusOfSatisfaction)
-        //if (dir.magnitude <= distThisFrame)
-        {               //If length of vector facing destination is shorter than distance covered this frame
+        if (distToDestination < radiusOfSatisfaction) //if close enough to say object is at destination
+        {        
             //Reached node
             targetPathNode = null;
         }
-        else
-        {                                            //Can still move this frame without reaching destination
+        else                   //Can still move this frame without reaching destination
+        {                                            
 
             // Move towards destination
             transform.Translate(dir.normalized * distThisFrame, Space.World);

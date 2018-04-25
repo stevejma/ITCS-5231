@@ -171,7 +171,27 @@ ModelImporter:
     13700006: Eyes
     13700008: Shoes
     13700010: Tops
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bodymat
+    second: {fileID: 2100000, guid: 58fd4d7fa4effc241ad4d21c27243a9e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bottommat
+    second: {fileID: 2100000, guid: 58fd4d7fa4effc241ad4d21c27243a9e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Shoesmat
+    second: {fileID: 2100000, guid: ca2865f3483c2424d9efc71c0d9a5cf6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Topmat
+    second: {fileID: 2100000, guid: ca2865f3483c2424d9efc71c0d9a5cf6, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
