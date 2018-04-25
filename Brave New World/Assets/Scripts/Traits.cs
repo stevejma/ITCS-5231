@@ -243,16 +243,31 @@ public class Traits : MonoBehaviour {
             religion = "Christianity";
         }
 
+
         /*
          * Prints all traits.
          */
-        Debug.Log("Gender: " + gender + "\nAge: " + age + "\nEthnicity: " + ethnicity + "\nMarital Status: " + maritalStatus + "\nReligious Affiliation: " + religion
-            + "\nSexual Orientation: " + sexID + "\nParty Loyalty (1-10): " + loyalty + "\nOccupation: " + occupation);
+        Debug.Log("Gender: " + gender +
+                  "\nAge: " + age +
+                  "\nEthnicity: " + ethnicity +
+                  "\nMarital Status: " + maritalStatus +
+                  "\nReligious Affiliation: " + religion +
+                  "\nSexual Orientation: " + sexID +
+                  "\nParty Loyalty (1-10): " + loyalty +
+                  "\nOccupation: " + occupation);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
+    public string Storing() {
+        string output = ("Gender: " + gender +
+                        "\nAge: " + age +
+                        "\nEthnicity: " + ethnicity +
+                        "\nMarital Status: " + maritalStatus +
+                        "\nReligious Affiliation: " + religion +
+                        "\nSexual Orientation: " + sexID +
+                        "\nParty Loyalty (1-10): " + loyalty +
+                        "\nOccupation: " + occupation);
+
+        return output;
 
     }
 }

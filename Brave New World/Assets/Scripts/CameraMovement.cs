@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class CameraMovement : MonoBehaviour {
@@ -24,6 +25,10 @@ public class CameraMovement : MonoBehaviour {
     public Camera Camera_04;
     public Camera Camera_05;
     public Camera currentCam;
+
+    RaycastHit hitInfo = new RaycastHit();
+
+    public Text infoText;
 
     void Start() {
         Cursor.lockState = CursorLockMode.Locked;
@@ -100,28 +105,31 @@ public class CameraMovement : MonoBehaviour {
         fov = Mathf.Clamp(fov, minFov, maxFov);
         currentCam.fieldOfView = fov;
 
-        if (Input.GetMouseButtonDown(0))
-        {
+        if (Input.GetMouseButtonDown(0)) {
             Debug.Log("Mouse is down");
 
-            RaycastHit hitInfo = new RaycastHit();
-            bool hit = Physics.Raycast(currentCam.ScreenPointToRay(Input.mousePosition), out hitInfo);
-            if (hit)
-            {
-                Debug.Log("Hit " + hitInfo.transform.gameObject.name);
-                if (hitInfo.transform.gameObject.tag == "xNPC")
-                {
-                    Debug.Log("Hit Female");
-                }
-                else if (hitInfo.transform.gameObject.tag == "yNPC")
-                {
-                    Debug.Log("Hit Male");
-                } else
-                {
-                    Debug.Log("Nope.");
-                }
-            }
+            Ray toMouse = currentCam.ScreenPointToRay(Input.mousePosition);
+            RaycastHit rhInfo;
+            bool didHit = Physics.Raycast(toMouse, out rhInfo, 500.0f);
 
+            if (didHit) {
+                if (rhInfo.transform.gameObject.tag == "xNPC") {
+                    Traits getTraits = rhInfo.transform.GetComponent<Traits>();
+                    infoText.text = getTraits.Storing();
+
+                    Debug.Log("Hit Female");
+
+                } else if (rhInfo.transform.gameObject.tag == "yNPC") {
+                    Traits getTraits = rhInfo.transform.GetComponent<Traits>();
+                    infoText.text = getTraits.Storing();
+
+                    Debug.Log("Hit Male");
+                } else {
+                    Debug.Log("Did not hit NPC");
+                }
+            } else {
+                Debug.Log("Hit empty space.");
+            }
         }
     }
 }
