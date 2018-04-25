@@ -258,7 +258,7 @@ public class Traits : MonoBehaviour {
     }
 
     public string Storing() {
-        string output = ("Gender: " + gender +
+        string output = ("Target Info \nGender: " + gender +
                         "\nAge: " + age +
                         "\nEthnicity: " + ethnicity +
                         "\nMarital Status: " + maritalStatus +

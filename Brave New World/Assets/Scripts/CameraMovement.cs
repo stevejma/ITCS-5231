@@ -110,7 +110,7 @@ public class CameraMovement : MonoBehaviour {
 
             Ray toMouse = currentCam.ScreenPointToRay(Input.mousePosition);
             RaycastHit rhInfo;
-            bool didHit = Physics.Raycast(toMouse, out rhInfo, 500.0f);
+            bool didHit = Physics.Raycast(toMouse, out rhInfo, 1000.0f);
 
             if (didHit) {
                 if (rhInfo.transform.gameObject.tag == "xNPC") {
