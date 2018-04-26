@@ -31,7 +31,7 @@ public class CharacterManager : MonoBehaviour
             path = "Path3";
         }
 
-        moveSpeed = Random.Range(1, 3);
+        moveSpeed = (Random.Range(1, 8)) / 4;
         pathGO = GameObject.Find(path);
         anim.SetTrigger("idle");
     }
