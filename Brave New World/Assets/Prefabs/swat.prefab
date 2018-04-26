@@ -711,6 +711,8 @@ GameObject:
   - component: {fileID: 4478336847103398}
   - component: {fileID: 95715943147682522}
   - component: {fileID: 114125052971761122}
+  - component: {fileID: 65156905652920452}
+  - component: {fileID: 114468681392541918}
   m_Layer: 0
   m_Name: swat
   m_TagString: Untagged
@@ -1585,8 +1587,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1635814125612150}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: -0, w: -0.7071068}
-  m_LocalPosition: {x: 160.53865, y: -23.978275, z: 138.72478}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: -0.7071068}
+  m_LocalPosition: {x: 135.47, y: -24.978275, z: 128.23999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4870301158290088}
@@ -2168,6 +2170,18 @@ Transform:
   m_Father: {fileID: 4975127540514880}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &65156905652920452
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1635814125612150}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.3445511, y: 1.8415165, z: 0.3347473}
+  m_Center: {x: 0.012256622, y: 0.8844881, z: 0.039749146}
 --- !u!95 &95715943147682522
 Animator:
   serializedVersion: 3
@@ -2198,6 +2212,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 95715943147682522}
   pathIndex: 1
+--- !u!114 &114468681392541918
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1635814125612150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4b58628dbfb1114f9ae07f61ce31e56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NPC: {fileID: 1635814125612150}
+  age: 0
+  loyalty: 0
+  gender: 
+  ethnicity: 
+  sexID: 
+  occupation: 
+  religion: 
+  maritalStatus: 
 --- !u!137 &137436381178367208
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
