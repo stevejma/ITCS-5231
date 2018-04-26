@@ -8,6 +8,10 @@ public class PauseMenu : MonoBehaviour {
     public static bool GamePaused = false;
     public GameObject pauseMenuUI;
     public GameObject hudUI;
+    public AudioSource intro;
+
+    bool isStillPlaying;
+
 	
 	// Update is called once per frame
 	void Update () {
@@ -22,6 +26,14 @@ public class PauseMenu : MonoBehaviour {
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
         pauseMenuUI.SetActive(false);
+
+        if(isStillPlaying == true) {
+            intro.Play();
+        } else if (isStillPlaying == false)
+        {
+            intro.Stop();
+        }
+        
         hudUI.SetActive(true);
         Time.timeScale = 1f;
         GamePaused = false;
@@ -31,6 +43,15 @@ public class PauseMenu : MonoBehaviour {
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
         pauseMenuUI.SetActive(true);
+
+        if(intro.isPlaying) {
+            intro.Pause();
+            isStillPlaying = true;
+        } else if (!intro.isPlaying ){
+            isStillPlaying = false;
+        }
+
+        
         hudUI.SetActive(false);
         Time.timeScale = 0f;
         GamePaused = true;

@@ -193,9 +193,9 @@ public class Traits : MonoBehaviour {
          *      Other - 2%     
          */
         if (Random.value <= 0.01) {
-            ethnicity = "American Indian";
-        } else if (Random.value <= 0.03) {
             ethnicity = "Other";
+        } else if (Random.value <= 0.03) {
+            ethnicity = "Middle Eastern";
         } else if (Random.value <= 0.08) {
             ethnicity = "Asian";
         } else if (Random.value <= 0.2) {
@@ -257,16 +257,9 @@ public class Traits : MonoBehaviour {
                   "\nOccupation: " + occupation);
     }
 
-    public string Storing() {
-        string output = ("Target Info \nGender: " + gender +
-                        "\nAge: " + age +
-                        "\nEthnicity: " + ethnicity +
-                        "\nMarital Status: " + maritalStatus +
-                        "\nReligious Affiliation: " + religion +
-                        "\nSexual Orientation: " + sexID +
-                        "\nParty Loyalty (1-10): " + loyalty +
-                        "\nOccupation: " + occupation);
-
+    public string[] Storing() {
+        string[] output = { gender, age.ToString(), ethnicity, maritalStatus, religion, sexID, loyalty.ToString(), occupation };
+            
         return output;
 
     }

@@ -26,13 +26,15 @@ public class CameraMovement : MonoBehaviour {
     public Camera Camera_05;
     public Camera currentCam;
 
-    RaycastHit hitInfo = new RaycastHit();
+
 
     public Text infoText;
+    public GameObject confirm;
 
     void Start() {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = true;
+        confirm.SetActive(false);
         Camera_01.enabled = true;
         Camera_02.enabled = false;
         Camera_03.enabled = false;
@@ -108,6 +110,7 @@ public class CameraMovement : MonoBehaviour {
         if (Input.GetMouseButtonDown(0)) {
             Debug.Log("Mouse is down");
 
+            RaycastHit hitInfo = new RaycastHit();
             Ray toMouse = currentCam.ScreenPointToRay(Input.mousePosition);
             RaycastHit rhInfo;
             bool didHit = Physics.Raycast(toMouse, out rhInfo, 1000.0f);
@@ -115,20 +118,40 @@ public class CameraMovement : MonoBehaviour {
             if (didHit) {
                 if (rhInfo.transform.gameObject.tag == "xNPC") {
                     Traits getTraits = rhInfo.transform.GetComponent<Traits>();
-                    infoText.text = getTraits.Storing();
+                    infoText.text = ("Target Info \nGender: " + getTraits.Storing()[0] +
+                        "\nAge: " + getTraits.Storing()[1] +
+                        "\nEthnicity: " + getTraits.Storing()[2] +
+                        "\nMarital Status: " + getTraits.Storing()[3] +
+                        "\nReligious Affiliation: " + getTraits.Storing()[4]+
+                        "\nSexual Orientation: " + getTraits.Storing()[5] +
+                        "\nParty Loyalty (1-10): " + getTraits.Storing()[6] +
+                        "\nOccupation: " + getTraits.Storing()[7]);
 
+
+                    confirm.SetActive(true);
                     Debug.Log("Hit Female");
 
                 } else if (rhInfo.transform.gameObject.tag == "yNPC") {
                     Traits getTraits = rhInfo.transform.GetComponent<Traits>();
-                    infoText.text = getTraits.Storing();
+                    infoText.text = ("Target Info \nGender: " + getTraits.Storing()[0] +
+                        "\nAge: " + getTraits.Storing()[1] +
+                        "\nEthnicity: " + getTraits.Storing()[2] +
+                        "\nMarital Status: " + getTraits.Storing()[3] +
+                        "\nReligious Affiliation: " + getTraits.Storing()[4] +
+                        "\nSexual Orientation: " + getTraits.Storing()[5] +
+                        "\nParty Loyalty (1-10): " + getTraits.Storing()[6] +
+                        "\nOccupation: " + getTraits.Storing()[7]);
 
+                    confirm.SetActive(true);
                     Debug.Log("Hit Male");
+
                 } else {
                     Debug.Log("Did not hit NPC");
+                    confirm.SetActive(false);
                 }
             } else {
                 Debug.Log("Hit empty space.");
+                confirm.SetActive(false);
             }
         }
     }
