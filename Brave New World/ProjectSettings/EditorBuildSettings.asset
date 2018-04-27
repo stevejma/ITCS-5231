@@ -11,3 +11,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Gameworld.unity
     guid: 33d113edf9a36584d85a7e1aeea846a2
+  - enabled: 1
+    path: Assets/Scenes/FailState.unity
+    guid: b1410dac910494946a1dedcdc6b2b471
