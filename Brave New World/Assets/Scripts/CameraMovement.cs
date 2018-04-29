@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class CameraMovement : MonoBehaviour {
 	public float minX;
@@ -29,15 +30,6 @@ public class CameraMovement : MonoBehaviour {
     public Text infoText;
     public GameObject confirm;
 
-    public  string age;
-    public  string loyalty;
-    public  string gender;
-    public  string ethnicity;
-    public  string sexID;
-    public  string occupation;
-    public  string religion;
-    public  string maritalStatus;
-
     public static string[] list = new string[8];
 
     public Text missionText;
@@ -46,6 +38,8 @@ public class CameraMovement : MonoBehaviour {
     public AudioSource source;
 
     public static int mission;
+    public static int totalCount = 1;
+    public static int failCount = 0;
 
     void Start() {
         source.clip = gameStartAudio;
@@ -54,7 +48,6 @@ public class CameraMovement : MonoBehaviour {
         CurrentMission();
 
         Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = true;
         confirm.SetActive(false);
         Camera_01.enabled = true;
         Camera_02.enabled = false;
@@ -62,10 +55,10 @@ public class CameraMovement : MonoBehaviour {
         Camera_04.enabled = false;
         Camera_05.enabled = false;
 
+        currentCam = Camera_01;
     }
 
     void Update() {
-        
 
         if (Input.GetKeyDown(KeyCode.Alpha1)) {
 
@@ -123,7 +116,7 @@ public class CameraMovement : MonoBehaviour {
         //Sets clamp on both x and y movement
         rotationY = Mathf.Clamp(rotationY, minY, maxY);
         rotationX = Mathf.Clamp(rotationX, minX, maxX);
-        transform.localEulerAngles = new Vector3(-rotationY, rotationX, 0);
+        currentCam.transform.localEulerAngles = new Vector3(-rotationY, rotationX, 0);
 
         float fov = currentCam.fieldOfView;
         fov -= Input.GetAxis("Mouse ScrollWheel") * sensitivity;
@@ -133,7 +126,7 @@ public class CameraMovement : MonoBehaviour {
         if (Input.GetMouseButtonDown(0)) {
             Debug.Log("Mouse is down");
 
-            RaycastHit hitInfo = new RaycastHit();
+            //RaycastHit hitInfo = new RaycastHit();
             Ray toMouse = currentCam.ScreenPointToRay(Input.mousePosition);
             RaycastHit rhInfo;
             bool didHit = Physics.Raycast(toMouse, out rhInfo, 1000.0f);
@@ -218,10 +211,10 @@ public class CameraMovement : MonoBehaviour {
     }
 
     void CurrentMission() {
+        Debug.Log("Target #" + totalCount + " Fails: " + failCount);
         mission = Random.Range(0, 3);
 
-        switch(mission)
-        {
+        switch(mission) {
             case 2:
                 missionText.text = "Mission Objectives: \nTarget is a political dissenter posting anti-government propaganda on the local state-sponsored university’s campus. Target may not necessarily be a student. Shows knowledge about university’s security systems. ";
                 break;
@@ -229,7 +222,7 @@ public class CameraMovement : MonoBehaviour {
                 missionText.text = "Mission Objectives: \nTarget is a frequent financial sponsor and local leader of Queer rights groups. Historically these groups have been marginally successful disrupting social order among youth culture by promoting literature against State-Cultural laws at privately run educational institutions.";
                 break;
             case 0:
-                missionText.text = "Target is a local ring leader organizing musical venues that promote anti-establishment themes and values through various anonymous online postings. Shows proficiency in avoiding net censures.";
+                missionText.text = "Mission Objectives: \nTarget is a local ring leader organizing musical venues that promote anti-establishment themes and values through various anonymous online postings. Shows proficiency in avoiding net censures.";
                 break;
             default:
                 missionText.text = "Error";
@@ -241,27 +234,50 @@ public class CameraMovement : MonoBehaviour {
     void Mission2(string [] list) {
 
         if (list[7].Equals("Student") || list[7].Equals("Professor") || list[7].Equals("Network administrator")) {
-            Debug.Log("You win!");
-        } else { Debug.Log("You lose!"); }
-    }
-
-    void Mission1(string[] list)
-    {
-
-        if (list[5].Equals("Homosexual Tendencies") || list[5].Equals("Homosexual"))
-        {
-            Debug.Log("You win!");
+            totalCount++;
+            CurrentMission();
+        } else {
+            failCount++;
+            Debug.Log("Total Missions: " + totalCount + " Fails: " + failCount);
         }
-        else { Debug.Log("You lose!"); }
-    }
-    void Mission0(string[] list)
-    {
 
-        if (list[7].Equals("Musician") || list[7].Equals("Web content developer") || list[7].Equals("Network administrator"))
-        {
-            Debug.Log("You win!");
+        CheckFail();
+
+    }
+
+    void Mission1(string[] list) {
+
+        if (list[5].Equals("Homosexual Tendencies") || list[5].Equals("Homosexual")) {
+            totalCount++;
+            CurrentMission();
+        } else {
+            failCount++;
+            Debug.Log("Total Missions: " + totalCount + " Fails: " + failCount);
         }
-        else { Debug.Log("You lose!"); }
+
+        CheckFail();
+        
+    }
+    void Mission0(string[] list) {
+
+        if (list[7].Equals("Musician") || list[7].Equals("Web content developer") || list[7].Equals("Network administrator")) {
+            totalCount++;
+            CurrentMission();
+        } else {
+            failCount++;
+            Debug.Log("Total Missions: " + totalCount + " Fails: " + failCount);
+        }
+
+        CheckFail();
     }
 
+    void CheckFail() {
+        
+        if (failCount == 5) {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+            SceneManager.LoadScene("FailState");
+            
+        }
+    }
 }

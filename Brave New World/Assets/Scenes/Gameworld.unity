@@ -2252,6 +2252,63 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 317174027}
+--- !u!1 &318219377
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 318219378}
+  - component: {fileID: 318219379}
+  m_Layer: 0
+  m_Name: CameraController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &318219378
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 318219377}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 373061452}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &318219379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 318219377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84877f97a316ade4ab486566065323cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minX: 65
+  maxX: 120
+  minY: -45
+  maxY: 45
+  sensX: 100
+  sensY: 100
+  Camera_01: {fileID: 505083111}
+  Camera_02: {fileID: 353012336}
+  Camera_03: {fileID: 2092487625}
+  Camera_04: {fileID: 611812554}
+  Camera_05: {fileID: 331085512}
+  currentCam: {fileID: 505083111}
+  infoText: {fileID: 1140589244}
+  confirm: {fileID: 754560484}
+  missionText: {fileID: 299179877}
+  gameStartAudio: {fileID: 8300000, guid: 82d5ebd0be1408644860749b7407bd3d, type: 3}
+  source: {fileID: 533619652}
 --- !u!1 &321497437
 GameObject:
   m_ObjectHideFlags: 0
@@ -2343,7 +2400,6 @@ GameObject:
   - component: {fileID: 331085512}
   - component: {fileID: 331085511}
   - component: {fileID: 331085510}
-  - component: {fileID: 331085509}
   m_Layer: 0
   m_Name: Camera_05
   m_TagString: Cam
@@ -2364,42 +2420,6 @@ Transform:
   m_Father: {fileID: 1963572558}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 93.79101, z: 0}
---- !u!114 &331085509
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 331085507}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84877f97a316ade4ab486566065323cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minX: 45
-  maxX: 140
-  minY: -45
-  maxY: 45
-  sensX: 100
-  sensY: 100
-  Camera_01: {fileID: 505083111}
-  Camera_02: {fileID: 353012336}
-  Camera_03: {fileID: 2092487625}
-  Camera_04: {fileID: 611812554}
-  Camera_05: {fileID: 331085512}
-  currentCam: {fileID: 331085512}
-  infoText: {fileID: 1140589244}
-  confirm: {fileID: 754560484}
-  age: 
-  loyalty: 
-  gender: 
-  ethnicity: 
-  sexID: 
-  occupation: 
-  religion: 
-  maritalStatus: 
-  missionText: {fileID: 299179877}
-  gameStartAudio: {fileID: 8300000, guid: 82d5ebd0be1408644860749b7407bd3d, type: 3}
-  source: {fileID: 533619652}
 --- !u!81 &331085510
 AudioListener:
   m_ObjectHideFlags: 0
@@ -2505,7 +2525,6 @@ GameObject:
   - component: {fileID: 353012336}
   - component: {fileID: 353012335}
   - component: {fileID: 353012334}
-  - component: {fileID: 353012333}
   m_Layer: 0
   m_Name: Camera_02
   m_TagString: Cam
@@ -2526,42 +2545,6 @@ Transform:
   m_Father: {fileID: 612340095}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 100, z: 0}
---- !u!114 &353012333
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 353012331}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84877f97a316ade4ab486566065323cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minX: 55
-  maxX: 120
-  minY: -45
-  maxY: 45
-  sensX: 100
-  sensY: 100
-  Camera_01: {fileID: 505083111}
-  Camera_02: {fileID: 353012336}
-  Camera_03: {fileID: 2092487625}
-  Camera_04: {fileID: 611812554}
-  Camera_05: {fileID: 331085512}
-  currentCam: {fileID: 353012336}
-  infoText: {fileID: 1140589244}
-  confirm: {fileID: 754560484}
-  age: 
-  loyalty: 
-  gender: 
-  ethnicity: 
-  sexID: 
-  occupation: 
-  religion: 
-  maritalStatus: 
-  missionText: {fileID: 299179877}
-  gameStartAudio: {fileID: 8300000, guid: 82d5ebd0be1408644860749b7407bd3d, type: 3}
-  source: {fileID: 533619652}
 --- !u!81 &353012334
 AudioListener:
   m_ObjectHideFlags: 0
@@ -2773,6 +2756,7 @@ Transform:
   m_LocalPosition: {x: 117.73968, y: -44.32662, z: 115.9881}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 318219378}
   - {fileID: 1151771961}
   - {fileID: 612340095}
   - {fileID: 382000470}
@@ -2924,7 +2908,7 @@ Transform:
   - {fileID: 1980128735}
   - {fileID: 2092487621}
   m_Father: {fileID: 373061452}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 308.53198, z: 0}
 --- !u!1001 &382099243
 Prefab:
@@ -3658,7 +3642,6 @@ GameObject:
   - component: {fileID: 505083111}
   - component: {fileID: 505083110}
   - component: {fileID: 505083109}
-  - component: {fileID: 505083108}
   m_Layer: 0
   m_Name: Camera_01
   m_TagString: MainCamera
@@ -3679,42 +3662,6 @@ Transform:
   m_Father: {fileID: 1151771961}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 235, z: 0}
---- !u!114 &505083108
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 505083106}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84877f97a316ade4ab486566065323cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minX: 65
-  maxX: 110
-  minY: -45
-  maxY: 45
-  sensX: 100
-  sensY: 100
-  Camera_01: {fileID: 505083111}
-  Camera_02: {fileID: 353012336}
-  Camera_03: {fileID: 2092487625}
-  Camera_04: {fileID: 611812554}
-  Camera_05: {fileID: 331085512}
-  currentCam: {fileID: 505083111}
-  infoText: {fileID: 1140589244}
-  confirm: {fileID: 754560484}
-  age: 
-  loyalty: 
-  gender: 
-  ethnicity: 
-  sexID: 
-  occupation: 
-  religion: 
-  maritalStatus: 
-  missionText: {fileID: 299179877}
-  gameStartAudio: {fileID: 8300000, guid: 82d5ebd0be1408644860749b7407bd3d, type: 3}
-  source: {fileID: 533619652}
 --- !u!81 &505083109
 AudioListener:
   m_ObjectHideFlags: 0
@@ -5019,7 +4966,6 @@ GameObject:
   - component: {fileID: 611812554}
   - component: {fileID: 611812553}
   - component: {fileID: 611812552}
-  - component: {fileID: 611812551}
   m_Layer: 0
   m_Name: Camera_04
   m_TagString: Cam
@@ -5040,42 +4986,6 @@ Transform:
   m_Father: {fileID: 1963839044}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 100, z: 0}
---- !u!114 &611812551
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 611812549}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84877f97a316ade4ab486566065323cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minX: 65
-  maxX: 110
-  minY: -45
-  maxY: 45
-  sensX: 100
-  sensY: 100
-  Camera_01: {fileID: 505083111}
-  Camera_02: {fileID: 353012336}
-  Camera_03: {fileID: 2092487625}
-  Camera_04: {fileID: 611812554}
-  Camera_05: {fileID: 331085512}
-  currentCam: {fileID: 611812554}
-  infoText: {fileID: 1140589244}
-  confirm: {fileID: 754560484}
-  age: 
-  loyalty: 
-  gender: 
-  ethnicity: 
-  sexID: 
-  occupation: 
-  religion: 
-  maritalStatus: 
-  missionText: {fileID: 299179877}
-  gameStartAudio: {fileID: 8300000, guid: 82d5ebd0be1408644860749b7407bd3d, type: 3}
-  source: {fileID: 533619652}
 --- !u!81 &611812552
 AudioListener:
   m_ObjectHideFlags: 0
@@ -5173,7 +5083,7 @@ Transform:
   - {fileID: 852154894}
   - {fileID: 353012332}
   m_Father: {fileID: 373061452}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &625410806
 GameObject:
@@ -9301,7 +9211,7 @@ Transform:
   - {fileID: 505083107}
   - {fileID: 275235812}
   m_Father: {fileID: 373061452}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 134.862, z: 3.887}
 --- !u!1 &1166437333
 GameObject:
@@ -15711,7 +15621,7 @@ Transform:
   - {fileID: 1255326727}
   - {fileID: 331085508}
   m_Father: {fileID: 373061452}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!95 &1963572559
 Animator:
@@ -15778,7 +15688,7 @@ Transform:
   - {fileID: 591343462}
   - {fileID: 611812550}
   m_Father: {fileID: 373061452}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1971217585
 Prefab:
@@ -16823,7 +16733,6 @@ GameObject:
   - component: {fileID: 2092487625}
   - component: {fileID: 2092487624}
   - component: {fileID: 2092487623}
-  - component: {fileID: 2092487622}
   m_Layer: 0
   m_Name: Camera_03
   m_TagString: Cam
@@ -16844,42 +16753,6 @@ Transform:
   m_Father: {fileID: 382000470}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 100, z: 0}
---- !u!114 &2092487622
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2092487620}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84877f97a316ade4ab486566065323cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minX: 45
-  maxX: 150
-  minY: -45
-  maxY: 45
-  sensX: 100
-  sensY: 100
-  Camera_01: {fileID: 505083111}
-  Camera_02: {fileID: 353012336}
-  Camera_03: {fileID: 2092487625}
-  Camera_04: {fileID: 611812554}
-  Camera_05: {fileID: 331085512}
-  currentCam: {fileID: 2092487625}
-  infoText: {fileID: 1140589244}
-  confirm: {fileID: 754560484}
-  age: 
-  loyalty: 
-  gender: 
-  ethnicity: 
-  sexID: 
-  occupation: 
-  religion: 
-  maritalStatus: 
-  missionText: {fileID: 299179877}
-  gameStartAudio: {fileID: 8300000, guid: 82d5ebd0be1408644860749b7407bd3d, type: 3}
-  source: {fileID: 533619652}
 --- !u!81 &2092487623
 AudioListener:
   m_ObjectHideFlags: 0
