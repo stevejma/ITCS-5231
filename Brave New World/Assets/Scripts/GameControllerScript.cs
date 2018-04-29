@@ -3,7 +3,7 @@ using UnityEngine.UI;
 using System.Collections;
 using UnityEngine.SceneManagement;
 
-public class CameraMovement : MonoBehaviour {
+public class GameControllerScript : MonoBehaviour {
 	public float minX;
     public float maxX;
 	
@@ -35,6 +35,8 @@ public class CameraMovement : MonoBehaviour {
     public Text missionText;
 
     public AudioClip gameStartAudio;
+    //public AudioClip easterStartAudio;
+    public AudioClip[] newTarget;
     public AudioSource source;
 
     public static int mission;
@@ -235,6 +237,8 @@ public class CameraMovement : MonoBehaviour {
 
         if (list[7].Equals("Student") || list[7].Equals("Professor") || list[7].Equals("Network administrator")) {
             totalCount++;
+            source.clip = newTarget[Random.Range(0, newTarget.Length)]; 
+            source.Play();
             CurrentMission();
         } else {
             failCount++;
@@ -249,7 +253,8 @@ public class CameraMovement : MonoBehaviour {
 
         if (list[5].Equals("Homosexual Tendencies") || list[5].Equals("Homosexual")) {
             totalCount++;
-            CurrentMission();
+            source.clip = newTarget[Random.Range(0, newTarget.Length)];
+            source.Play();
         } else {
             failCount++;
             Debug.Log("Total Missions: " + totalCount + " Fails: " + failCount);
@@ -262,6 +267,8 @@ public class CameraMovement : MonoBehaviour {
 
         if (list[7].Equals("Musician") || list[7].Equals("Web content developer") || list[7].Equals("Network administrator")) {
             totalCount++;
+            source.clip = newTarget[Random.Range(0, newTarget.Length)];
+            source.Play();
             CurrentMission();
         } else {
             failCount++;
