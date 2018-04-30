@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Spawner : MonoBehaviour {
+public class Spawner1 : MonoBehaviour {
 
-    public GameObject[] npc;
+    public GameObject[] npc = new GameObject[3];
     public Vector3 spawnValues;
     public float spawnWait;
     public float spawnMostWait;
@@ -14,7 +14,8 @@ public class Spawner : MonoBehaviour {
     int randNPC;
 
 	void Start () {
-        StartCoroutine(WaitSpawn());
+        StartCoroutine(WaitSpawn1());
+        
 	}
 	
 	
@@ -22,15 +23,20 @@ public class Spawner : MonoBehaviour {
         spawnWait = Random.Range(spawnLeastWait, spawnMostWait);
 	}
 
-    IEnumerator WaitSpawn () {
+    IEnumerator WaitSpawn1 () {
         yield return new WaitForSeconds(startWait);
 
         while(true) {
             randNPC = Random.Range(0, npc.Length);
+            
+            //npc[0].AddComponent<CharacterManager1>();
+            //npc[1].AddComponent<CharacterManager1>();
+            //npc[2].AddComponent<CharacterManager1>();
 
             Vector3 spawnPosition = new Vector3(Random.Range(-spawnValues.x, spawnValues.x), 0, Random.Range(-spawnValues.z, spawnValues.z));
-
+ 
             Instantiate(npc[randNPC], spawnPosition + transform.TransformPoint(0, 0, 0), gameObject.transform.rotation);
+            
 
             yield return new WaitForSeconds(spawnWait);
         }

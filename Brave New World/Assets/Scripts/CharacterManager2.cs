@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CharacterManager : MonoBehaviour
+public class CharacterManager2 : MonoBehaviour
 {
     [SerializeField] private Animator anim;
-    [SerializeField] private int pathIndex;
+    [SerializeField] private int pathIndex = 1;
 
     GameObject pathGO;
     Transform targetPathNode;
@@ -23,7 +23,8 @@ public class CharacterManager : MonoBehaviour
         {
             path = "Path1";
         }
-        if (pathIndex == 1) {
+        if (pathIndex == 1)
+        {
             path = "Path2";
         }
         if (pathIndex == 2)
@@ -31,14 +32,15 @@ public class CharacterManager : MonoBehaviour
             path = "Path3";
         }
 
-        moveSpeed = Random.Range(1, 3);
+        moveSpeed = Random.Range(1.0f, 2.1f);
         pathGO = GameObject.Find(path);
-        anim.SetTrigger("idle");
+        //anim.SetTrigger("Entry");
     }
 
     void GetNextPathNode()
     {
-        if (pathNodeIndex < pathGO.transform.childCount) {
+        if (pathNodeIndex < pathGO.transform.childCount)
+        {
             targetPathNode = pathGO.transform.GetChild(pathNodeIndex);
             pathNodeIndex++;
         }
@@ -46,7 +48,7 @@ public class CharacterManager : MonoBehaviour
         {
             targetPathNode = null;
         }
-        
+
     }
 
     // Update is called once per frame
@@ -76,22 +78,22 @@ public class CharacterManager : MonoBehaviour
 
         //Animation if's
         if (distToDestination > radiusOfSatisfaction)   //Far away enough to keep walking
-        {   
+        {
             anim.SetTrigger("isWalking");
         }
 
         Debug.DrawLine(transform.position + Vector3.up, targetPathNode.position, Color.blue); //Blue is where the bots need to go, the node destination
         Debug.DrawRay(transform.position + Vector3.up, dir, Color.red);                   //Red is where they want to go, the "dir" vector
-        
+
 
         //Script if's
         if (distToDestination < radiusOfSatisfaction) //if close enough to say object is at destination
-        {        
+        {
             //Reached node
             targetPathNode = null;
         }
         else                   //Can still move this frame without reaching destination
-        {                                            
+        {
 
             // Move towards destination
             transform.Translate(dir.normalized * distThisFrame, Space.World);

@@ -243,15 +243,19 @@
   <ItemGroup>
     <Compile Include="Assets\Models\RDL\Security_Pack\Scripts\scr_camera.cs" />
     <Compile Include="Assets\scr.cs" />
-    <Compile Include="Assets\Scripts\CameraMovement.cs" />
-    <Compile Include="Assets\Scripts\CharacterManager.cs" />
+    <Compile Include="Assets\Scripts\CharacterManager1.cs" />
+    <Compile Include="Assets\Scripts\CharacterManager2.cs" />
+    <Compile Include="Assets\Scripts\CharacterManager3.cs" />
+    <Compile Include="Assets\Scripts\GameControllerScript.cs" />
     <Compile Include="Assets\Scripts\LoadSceneOnClick.cs" />
     <Compile Include="Assets\Scripts\PathNode.cs" />
     <Compile Include="Assets\Scripts\PauseMenu.cs" />
     <Compile Include="Assets\Scripts\QuitOnClick.cs" />
     <Compile Include="Assets\Scripts\SelectOnInput.cs" />
     <Compile Include="Assets\Scripts\SettingsMenu.cs" />
-    <Compile Include="Assets\Scripts\Spawner.cs" />
+    <Compile Include="Assets\Scripts\Spawner1.cs" />
+    <Compile Include="Assets\Scripts\Spawner2.cs" />
+    <Compile Include="Assets\Scripts\Spawner3.cs" />
     <Compile Include="Assets\Scripts\Traits.cs" />
   </ItemGroup>
   <ItemGroup>
