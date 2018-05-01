@@ -44,11 +44,13 @@ public class GameControllerScript : MonoBehaviour {
 
     public static int mission;
     public static int priorityMission;
-    public static int totalCount = 1;
-    public static int failCount = 0;
+    public static int totalCount;
+    public static int failCount;
 
     void Start() {
         startTime = Time.time;
+        totalCount = 1;
+        failCount = 0;
         source.clip = gameStartAudio;
         source.PlayDelayed(2);
 
@@ -201,16 +203,20 @@ public class GameControllerScript : MonoBehaviour {
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            if (totalCount % 2 == 1) {
-                PassToCompare(mission);
-            } else { PickPriorityMission(); }
+        if (Input.GetKeyDown(KeyCode.E)) {
+            PassToCompare(mission);
         }
     }
 
     void PassToCompare(int compare) {
-        if (compare == 2) {
+
+        if (compare == 5) {
+            Mission5(list);
+        } else if (compare == 4) {
+            Mission4(list);
+        } else if(compare == 3) {
+            Mission3(list);
+        }  else if (compare == 2) {
             Mission2(list);
         } else if (compare == 1) {
             Mission1(list);
@@ -220,41 +226,32 @@ public class GameControllerScript : MonoBehaviour {
     }
 
     void CurrentMission() {
-        Debug.Log("Target #" + totalCount + " Fails: " + failCount);
-        mission = Random.Range(0, 3);
-        
+        Debug.Log("Target #" + totalCount + " Fails: " + failCount); 
+        if(totalCount % 2 == 1)
+        {
+            mission = Random.Range(3, 6);
+        } else if (totalCount % 2 == 0) {
+            mission = Random.Range(0, 3);
+        }
+
         switch(mission) {
-            case 2:
+            case 5:
                 missionText.text = "Mission Objectives: \nTarget is a political dissenter posting anti-government propaganda on the local state-sponsored university’s campus. Target may not necessarily be a student. Shows knowledge about university’s security systems.";
                 break;
-            case 1:
+            case 4:
                 missionText.text = "Mission Objectives: \nTarget is a frequent financial sponsor and local leader of Queer rights groups. Historically these groups have been marginally successful disrupting social order among youth culture by promoting literature against State-Cultural laws at privately run educational institutions.";
                 break;
-            case 0:
+            case 3:
                 missionText.text = "Mission Objectives: \nTarget is a local ring leader organizing musical venues that promote anti-establishment themes and values through various anonymous online postings. Shows proficiency in avoiding net censures.";
                 break;
-            default:
-                missionText.text = "Error";
-                break;
-        }
-    }
-
-    void PickPriorityMission() {
-        Debug.Log("Total Missions: " + totalCount + " Fails: " + failCount);
-        priorityMission = Random.Range(0, 3);
-
-        switch (priorityMission) {
             case 2:
                 missionText.text = "Mission Objectives: \nTarget is a known dirty bomb maker working for-hire by known terrorist groups. Last few jobs indicate affiliation with Islamic groups based out of Yemen, Saudi Arabia, Syria, and Oman. Travel habits indicate frequent overseas travel. Shows high technical proficiency in explosives and chemical reactivity. Possible military background.";
-                PriorityMission2();
                 break;
             case 1:
                 missionText.text = "Mission Objectives: \nTarget is wanted for carrying out chemical weapons attacks throughout the city. Target is rumored to be in charge of several underground emergency health clinics harboring enemies of the state. Possible medical background.";
-                PriorityMission1();
                 break;
             case 0:
                 missionText.text = "Mission Objectives: \nTarget is responsible for the death and murders of several high ranking local authorities along with releasing videos of each crime online. Strong possibility of military background. Seems to only target ruling Party members.";
-                PriorityMission0();
                 break;
             default:
                 missionText.text = "Error";
@@ -262,125 +259,92 @@ public class GameControllerScript : MonoBehaviour {
         }
     }
 
-    void PriorityMission2 () {
-        source.clip = newPriorityTarget[Random.Range(0, newPriorityTarget.Length)];
-        source.Play();
+    void Mission5(string [] list) {
 
+        if (list[7].Equals("Student") || list[7].Equals("Professor") || list[7].Equals("Network administrator")) {
+            totalCount++;
+            source.clip = newPriorityTarget[Random.Range(0, newPriorityTarget.Length)];
+            source.Play();
+            CurrentMission();  
+        } else {
+            failCount++;
+            Debug.Log("Total Missions: " + totalCount + " Fails: " + failCount);
+        }
+
+        CheckFail();
+
+    }
+
+    void Mission4(string[] list) {
+
+        if (list[5].Equals("Homosexual Tendencies") || list[5].Equals("Homosexual")) {
+            totalCount++;
+            source.clip = newPriorityTarget[Random.Range(0, newPriorityTarget.Length)];
+            source.Play();
+            CurrentMission();  
+        } else {
+            failCount++;
+            Debug.Log("Total Missions: " + totalCount + " Fails: " + failCount);
+        }
+
+        CheckFail();
+        
+    }
+
+    void Mission3(string[] list) {
+
+        if (list[7].Equals("Musician") || list[7].Equals("Web content developer") || list[7].Equals("Network administrator")) {
+            totalCount++;
+            source.clip = newPriorityTarget[Random.Range(0, newPriorityTarget.Length)];
+            source.Play();
+            CurrentMission();
+        } else {
+            failCount++;
+            Debug.Log("Total Missions: " + totalCount + " Fails: " + failCount);
+        }
+
+        CheckFail();
+    }
+
+    void Mission2(string[] list) {
 
         if (list[7].Equals("Veteran (Active Duty)") || list[7].Equals("Veteran (Retired)") || list[7].Equals("Programmer") || list[2].Equals("Middle Eastern") || list[4].Equals("Muslim")) {
             totalCount++;
             source.clip = newTarget[Random.Range(0, newTarget.Length)];
             source.Play();
             CurrentMission();
-            
+
         } else {
             failCount++;
             Debug.Log("Total Missions: " + totalCount + " Fails: " + failCount);
         }
 
         CheckFail();
-
     }
 
-    void PriorityMission1()
-    {
-        source.clip = newPriorityTarget[Random.Range(0, newPriorityTarget.Length)];
-        source.Play();
+    void Mission1(string[] list) {
 
+        if (list[7].Equals("Chemical engineer") || list[7].Equals("Doctor") || list[7].Equals("Nurse") || list[7].Equals("EMT")) {
+            totalCount++;
+            source.clip = newTarget[Random.Range(0, newTarget.Length)];
+            source.Play();
+            CurrentMission();
+        } else {
+            failCount++;
+            Debug.Log("Total Missions: " + totalCount + " Fails: " + failCount);
+        }
 
-        if (list[7].Equals("Chemical engineer") || list[7].Equals("Doctor") || list[7].Equals("Nurse"))
-        {
+        CheckFail();
+    }
+
+    void Mission0(string[] list) {
+
+        if (list[6].Equals("1") || list[6].Equals("2") || list[6].Equals("3") || list[6].Equals("4")) {
             totalCount++;
             source.clip = newTarget[Random.Range(0, newTarget.Length)];
             source.Play();
             CurrentMission();
 
-        }
-        else
-        {
-            failCount++;
-            Debug.Log("Total Missions: " + totalCount + " Fails: " + failCount);
-        }
-
-        CheckFail();
-
-    }
-
-    void PriorityMission0()
-    {
-        source.clip = newPriorityTarget[Random.Range(0, newTarget.Length)];
-        source.Play();
-
-
-        if (list[6].Equals("1") || list[6].Equals("2") || list[6].Equals("3") || list[6].Equals("4"))
-        {
-            totalCount++;
-            source.clip = newTarget[Random.Range(0, newPriorityTarget.Length)];
-            source.Play();
-            CurrentMission();
-
-        }
-        else
-        {
-            failCount++;
-            Debug.Log("Total Missions: " + totalCount + " Fails: " + failCount);
-        }
-
-        CheckFail();
-
-    }
-
-    void Mission2(string [] list) {
-
-        if (list[7].Equals("Student") || list[7].Equals("Professor") || list[7].Equals("Network administrator")) {
-            totalCount++;
-            if (totalCount % 2 == 0) {
-                PickPriorityMission();
-            } else if (totalCount % 2 == 1) {
-                source.clip = newTarget[Random.Range(0, newTarget.Length)];
-                source.Play();
-                CurrentMission();
-            }
-            
-        } else {
-            failCount++;
-            Debug.Log("Total Missions: " + totalCount + " Fails: " + failCount);
-        }
-
-        CheckFail();
-
-    }
-
-    void Mission1(string[] list) {
-
-        if (list[5].Equals("Homosexual Tendencies") || list[5].Equals("Homosexual")) {
-            totalCount++;
-            if (totalCount % 2 == 0) {
-                PickPriorityMission();
-            } else if (totalCount % 2 == 1) {
-                source.clip = newTarget[Random.Range(0, newTarget.Length)];
-                source.Play();
-                CurrentMission();
-            }
-        } else {
-            failCount++;
-            Debug.Log("Total Missions: " + totalCount + " Fails: " + failCount);
-        }
-
-        CheckFail();
-        
-    }
-    void Mission0(string[] list) {
-
-        if (list[7].Equals("Musician") || list[7].Equals("Web content developer") || list[7].Equals("Network administrator")) {
-            totalCount++;
-            if (totalCount % 2 == 0) {
-                PickPriorityMission();
-            } else if (totalCount % 2 == 1) {
-                source.clip = newTarget[Random.Range(0, newTarget.Length)];
-                source.Play();
-                CurrentMission();
-            }
         } else {
             failCount++;
             Debug.Log("Total Missions: " + totalCount + " Fails: " + failCount);
@@ -394,8 +358,7 @@ public class GameControllerScript : MonoBehaviour {
         if (failCount == 5) {
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
-            SceneManager.LoadScene("FailState");
-            
+            SceneManager.LoadScene("FailState");    
         }
     }
 }
